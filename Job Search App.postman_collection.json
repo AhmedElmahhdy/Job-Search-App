@@ -1,0 +1,617 @@
+{
+	"info": {
+		"_postman_id": "fe2a418a-d691-4007-9d23-0ff31f1004fd",
+		"name": "Job Search App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34113326"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "Sign UP",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    //firstname,lastname,email,password,recoveryEmail,DOB,mobileNumber\r\n    \"firstname\":\"ahmed \",\r\n    \"lastname\":\"Alaa\",\r\n    \"email\":\"ahmedalaa151002@gmail.com\",\r\n    \"Password\":\"ahmed2013\",\r\n    \"recoverEmail\":\"ahmedalaa@gmail.com\",\r\n    \"DOB\":\"2023-5-3\",\r\n    \"mobileNumber\":1143002809\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/user/signup",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"user",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sign In",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"email\":\"ahmedalaa151002@gmail.com\",\r\n    \"password\":\"1234\"\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/user/signin",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"user",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "Job-Search-App eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OGRkNDJmMTk5ZjNjNmU1NjM4MDZmMiIsImlhdCI6MTcyMDU3MTA3N30.s83OpJ8p_FdwWvRGBQxVGFTDXezO38gnQSv3q4Le6Mo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"lastname\":\"elmahdy\",  \r\n     \"email\":\"ahmed01143002809@gmail.com\",\r\n//     //\"Password\":\"ahmed2013\",\r\n//     \"recoveryEmail\":\"ahmedaltttttss2@gmail.com\",\r\n    \"DOB\":\"20002-5-3\",\r\n     \"mobileNumber\":115678111\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/user/update/668dd42f199f3c6e563806f1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"user",
+								"update",
+								"668dd42f199f3c6e563806f1"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "668a96ac4daf3ed9e5b9d4ff",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Log Out",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "Job-Search-App eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OGJmZjA0MzViN2M5YWUxMmQxYzE5ZiIsImlhdCI6MTcyMDU2MjExNH0.862s3CLfDpDUcOVvgIY9JtvOnMswssmb2Ukuqh9sJyk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/user/logout",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"user",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "Job-Search-App eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OGE5NmFjNGRhZjNlZDllNWI5ZDRmZiIsImlhdCI6MTcyMDM3MTI4N30.aCjknkWbEW3V7je024QCiOKg7e6Bg2b8eZrtvMYM1g0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/user/delete/668a96ac4daf3ed9e5b9d4ff",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"user",
+								"delete",
+								"668a96ac4daf3ed9e5b9d4ff"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Data of User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "Job-Search-App eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OGI5YmY2MDRmMzUwM2Y1OWJkNThlZSIsImlhdCI6MTcyMDQyNTUzMn0.ajwmaDhMd-VziwK4Q2DWe57V7QORs_khsO1zK3PDaW8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/user/get/668b9bf604f3503f59bd58ee",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"user",
+								"get",
+								"668b9bf604f3503f59bd58ee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "Job-Search-App eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OGRkNDJmMTk5ZjNjNmU1NjM4MDZmMiIsImlhdCI6MTcyMDU3MTA3N30.s83OpJ8p_FdwWvRGBQxVGFTDXezO38gnQSv3q4Le6Mo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/user/getprofile/668dd42f199f3c6e563806f2",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"user",
+								"getprofile",
+								"668dd42f199f3c6e563806f2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "Job-Search-App eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OGRkNDJmMTk5ZjNjNmU1NjM4MDZmMiIsImlhdCI6MTcyMDU3MTA3N30.s83OpJ8p_FdwWvRGBQxVGFTDXezO38gnQSv3q4Le6Mo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"oldPassword\":\"123\",\r\n    \"newPassword\":\"1234\",\r\n    \"confirmNewPassword\":\"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/user/updatepassword",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"user",
+								"updatepassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verify OTP",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/user/verifyotp/668be4299a704beb6e054db7/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"user",
+								"verifyotp",
+								"668be4299a704beb6e054db7",
+								""
+							],
+							"query": [
+								{
+									"key": "otp",
+									"value": "766386",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forget Password",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"ahmedalaa151002@gmail.com\",\r\n    \"newPassword\":\"123\",\r\n    \"confirmNewPassword\":\"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/user/forgetpassword",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"user",
+								"forgetpassword"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Company",
+			"item": [
+				{
+					"name": "add company",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "Job-Search-App eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OGJmZjA0MzViN2M5YWUxMmQxYzE5ZiIsImlhdCI6MTcyMDUxOTczOH0.Kca-t8PezEJj3s60n7nkhf4m_6l1gjfy6SoKQ8_Lwwo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Route\",\r\n    \"description\":\"online & offline courses\",\r\n    \"industry\":\"tech\",\r\n    \"address\":\"madii\",\r\n    \"numberOfEmloyes\":\"11-22\"\r\n    ,\"emailCompany\":\"Roufklgmornge@gmail.com\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/company/add",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"company",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update company",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "Job-Search-App eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OGJmZjA0MzViN2M5YWUxMmQxYzE5ZiIsImlhdCI6MTcyMDUxOTczOH0.Kca-t8PezEJj3s60n7nkhf4m_6l1gjfy6SoKQ8_Lwwo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Hfff\",\r\n    \"description\":\"ddddd\",\r\n    \"industry\":\"clothing\",\r\n    \"address\":\"jkfj  55\",\r\n    \"numberOfEmloyes\":\"11-22\",\r\n    \"emailCompany\":\"ahmedaltttttss2@gmail.com\"\r\n   // ,\"companyHr\":\"668bff0435b7c9ae12d1c19f\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/company/update/668d0be95aa8c5e5d3da73ee",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"company",
+								"update",
+								"668d0be95aa8c5e5d3da73ee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete company",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "Job-Search-App eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OGJmZjA0MzViN2M5YWUxMmQxYzE5ZiIsImlhdCI6MTcyMDUxOTczOH0.Kca-t8PezEJj3s60n7nkhf4m_6l1gjfy6SoKQ8_Lwwo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/company/delete/668d0be95aa8c5e5d3da73ee",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"company",
+								"delete",
+								"668d0be95aa8c5e5d3da73ee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sreach by name",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "Job-Search-App eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OGJmZjA0MzViN2M5YWUxMmQxYzE5ZiIsImlhdCI6MTcyMDUxOTczOH0.Kca-t8PezEJj3s60n7nkhf4m_6l1gjfy6SoKQ8_Lwwo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"H55\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/company/get",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"company",
+								"get"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "job",
+			"item": [
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "Job-Search-App eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OGJmZjA0MzViN2M5YWUxMmQxYzE5ZiIsImlhdCI6MTcyMDUxOTczOH0.Kca-t8PezEJj3s60n7nkhf4m_6l1gjfy6SoKQ8_Lwwo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n       \"jobTitle\":\"Software Engineer \",\r\n        \"jobLocation\":\"onsite\",\r\n        \"companyName\":\"Route\",\r\n        \"jobDescription\":\"we searsh for ml Engineer\",\r\n        \"seniorityLevel\":\"Junior\",\r\n        \"workingTime\":\"full-time\",\r\n        \"softSkills\":[\"time management\" , \"team worker\"],\r\n        \"technicalSkills\":[\"python\",\"AI\"],\r\n        \"companyID\":\"668d9534e9113c2a93c95364\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/job/add",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"job",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "Job-Search-App eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OGJmZjA0MzViN2M5YWUxMmQxYzE5ZiIsImlhdCI6MTcyMDUxOTczOH0.Kca-t8PezEJj3s60n7nkhf4m_6l1gjfy6SoKQ8_Lwwo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n       \"jobTitle\":\"Backend developer \"\r\n        // \"jobLocation\":\"onsite\",\r\n        // \"companyName\":\"Route\",\r\n        // \"jobDescription\":\"we searsh for Backend developer\",\r\n        // \"seniorityLevel\":\"Junior\",\r\n        // \"workingTime\":\"full-time\",\r\n        // \"softSkills\":[\"time management\" , \"team worker\"],\r\n        // \"technicalSkills\":[\"node js\",\"express js\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/job/update/668d3af64e0adcfde0ed4040",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"job",
+								"update",
+								"668d3af64e0adcfde0ed4040"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "Job-Search-App eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OGJmZjA0MzViN2M5YWUxMmQxYzE5ZiIsImlhdCI6MTcyMDUxOTczOH0.Kca-t8PezEJj3s60n7nkhf4m_6l1gjfy6SoKQ8_Lwwo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/job/delete/668d3af64e0adcfde0ed4040",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"job",
+								"delete",
+								"668d3af64e0adcfde0ed4040"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get jobs",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "Job-Search-App eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OGJmZjA0MzViN2M5YWUxMmQxYzE5ZiIsImlhdCI6MTcyMDUxOTczOH0.Kca-t8PezEJj3s60n7nkhf4m_6l1gjfy6SoKQ8_Lwwo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/job/getjobs",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"job",
+								"getjobs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get jobs for specific company",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "Job-Search-App eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OGJmZjA0MzViN2M5YWUxMmQxYzE5ZiIsImlhdCI6MTcyMDUxOTczOH0.Kca-t8PezEJj3s60n7nkhf4m_6l1gjfy6SoKQ8_Lwwo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/job/get?companyName=Instent",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"job",
+								"get"
+							],
+							"query": [
+								{
+									"key": "companyName",
+									"value": "Instent"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "apply to job",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "Job-Search-App eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OGJmZjA0MzViN2M5YWUxMmQxYzE5ZiIsImlhdCI6MTcyMDU2MjExNH0.862s3CLfDpDUcOVvgIY9JtvOnMswssmb2Ukuqh9sJyk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userTechSkills\":[\"python\",\"pytorch\"],\r\n    \"userSoftSkills\":[\"time mangement\",\"team work\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/job/applytojob/668d9d8769ba1ca80fe26a91",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"job",
+								"applytojob",
+								"668d9d8769ba1ca80fe26a91"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
